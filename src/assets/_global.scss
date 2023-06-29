@@ -1,0 +1,131 @@
+$company_blue: #004390;
+$company_light_blue: #1d508a;
+$light_company_blue: #F0F4F8;
+$active_light_company_blue: #f0f4f8fd;
+$ligth_font_color: #D3D7DF;
+$dark_font_color: #303030;
+$darker_shadow: 1px 1px 5px 1px #44444480;
+$dark_shadow: 1px 1px 7px 1px #6969695b;
+$delete-red:#a81212d7;
+$error-red: #fa3b3b;
+$succes-green: #43fa5b;
+$text_grey: #858585;
+$linerider_grey: #6d6d6d7e;
+$icon_base_grey: #d1d1d1;
+$icon_active_grey: #474747;
+
+.underlined {
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $company_blue;
+  }
+}
+
+
+.metaTable {
+  &_fixedData {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 15px;
+    min-height: fit-content !important;
+
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+    }
+
+    &_value {
+      font-size: 0.9rem;
+      color: $text_grey;
+      font-weight: 500 !important;
+    }
+
+    &_title {
+      display: flex;
+      justify-content: space-between;
+      margin: 2px 0;
+
+      &_icon {
+        height: 1.3rem;
+      }
+
+      p {
+        font-weight: normal !important;
+      }
+    }
+
+    p {
+      text-align: left;
+      margin: 0;
+      font-weight: 600;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+  }
+}
+
+
+
+// Global Animations
+.confirm-screen-enter-active,
+.confirm-screen-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.confirm-screen-enter-from,
+.confirm-screen-leave-to {
+  opacity: 0;
+}
+
+.content-layout {
+  height: calc(100vh - 30px);
+  width: calc(100% - 170px);
+  margin-left: 150px;
+}
+
+.miniTable{
+  &_wrapper {
+    text-align: left;
+    height: 100%;
+    padding: 0 10px;
+    overflow-y: scroll;
+  }
+
+  &_row {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    transition: 0.15s all;
+    
+    &_rightCluster {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 10px;
+
+      
+      svg {
+        height: 1.3rem;
+        margin: auto 15px auto 5px;
+      }
+    }
+
+    &:hover {
+      background-color: $light_company_blue;
+    }
+  }
+
+  &_pointer {
+    cursor: pointer;
+  }
+}
